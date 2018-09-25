@@ -2825,23 +2825,23 @@ if(true && block.GetHash() != hashGenesisBlock)
         	loop
         	{
         		scrypt_1024_1_1_256_sp(BEGIN(block.nVersion), BEGIN(thash), scratchpad);
-			if (thash <= hashTarget)	
+			if (thash <= hashTarget)
 				break;
-               		if ((block.nNonce & 0xFF) == 0)
-			{
-				printf("nonce %08X: hash = %s (target = %s)\n", block.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-
-			}
-			++block.nNonce;
-			if (block.nNonce == 0)
-			{
-				printf("NONCE WRAPPED, inccrementing time\n");
-				++block.nTime;
-			}
+               			if ((block.nNonce & 0xFF) == 0)
+				{
+					printf("nonce %08X: hash = %s (target = %s)\n", block.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
+				}
+				++block.nNonce;
+				if (block.nNonce == 0)
+				{
+					printf("NONCE WRAPPED, inccrementing time\n");
+					++block.nTime;
+				}
 		}
 		printf("block.nTime = %u \n",block.nTime);
 		printf("block.nNonce  = %u \n",block.nNonce);
 		printf("block.GetHash = %s \n",block.GetHash().ToString().c_str());
+}
 //----------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------
 
