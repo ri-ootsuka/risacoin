@@ -1,0 +1,9 @@
+Building Risacoin
+
+See doc/readme-qt.rst for instructions on building Risacoin-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Risacoin.
+
+See doc/build-*.txt for instructions on building risacoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Risacoin.
